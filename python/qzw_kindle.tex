@@ -1,0 +1,83 @@
+%!TEX program=xelatex
+\documentclass[oneside,17pt]{memoir}
+
+\usepackage[]{ctex}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold = {1.17}]{KaiTi}
+
+\usepackage{booktabs,tabularx,makecell}
+\usepackage{siunitx}
+\usepackage{graphicx}
+
+%%% Kindle version
+\usepackage[
+paperwidth=6in,
+paperheight=9in,
+margin=2mm,bottom=6mm,nohead
+]{geometry}
+%\setheadfoot{0pt}{2pt}
+\setlength{\footskip}{4mm}
+
+%%%% Screen landscape mode, 8x5
+%\usepackage[
+%paperwidth=32cm,
+%paperheight=20cm,
+%margin=10mm,nohead,bottom=15mm,
+%twocolumn,columnsep=20mm
+%]{geometry}
+%\setlength{\cftbeforechapterskip}{1ex}
+%%%%%%%%%%%%
+
+\makeoddfoot{plain}{}{\tiny\thepage}{}
+\makeevenfoot{plain}{}{\tiny\thepage}{}
+\pagestyle{plain}
+\setlength{\abovecaptionskip}{2pt}
+\setlength{\belowcaptionskip}{0pt}
+\setlength{\textfloatsep}{2pt}
+\setlength{\floatsep}{2pt}
+\setlength{\intextsep}{2pt}
+
+\chapterstyle{ger}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+\setlength{\cftchapternumwidth}{8em}
+
+\usepackage[setpagesize=false]{hyperref}
+\usepackage{longtable}
+\usepackage{tabu}
+
+\newcommand{\pinyinzh}{\fontsize{18pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
+\newcommand{\wenzizh}{\fontsize{40pt}{\baselineskip}\selectfont} % 三号,1.5倍行距 
+\newcommand{\zhushizh}{\fontsize{20pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
+
+\title{\zihao{0}千字文}
+\author{\href{mailto:OuTlK@QQ.CoM}{OuTlK@QQ.CoM}}
+% \date{}
+
+\begin{document}
+
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+
+% \setcounter{page}{1}
+\pagenumbering{Roman}
+%\tableofcontents*
+\begin{center}
+    \noindent
+    \bfseries
+    \input{qzw_all_kindle}
+\end{center}
+
+\clearpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\begin{longtabu} to \textwidth {p{1.25cm}<{\centering}p{1.25cm}<{\centering}p{1.25cm}<{\centering}p{1.25cm}<{\centering}p{.1cm}p{1.25cm}<{\centering}p{1.25cm}<{\centering}p{1.25cm}<{\centering}p{1.25cm}<{\centering}}
+    \centering
+    \input{"qzw.tex"}
+\end{longtabu}
+
+\end{document}
