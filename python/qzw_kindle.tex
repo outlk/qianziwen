@@ -2,12 +2,15 @@
 \documentclass[oneside,17pt]{memoir}
 
 \usepackage[]{ctex}
-\setmainfont{Times New Roman}
-\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold = {1.17}]{KaiTi}
-
 \usepackage{booktabs,tabularx,makecell}
 \usepackage{siunitx}
 \usepackage{graphicx}
+\usepackage[setpagesize=false]{hyperref}
+\usepackage{longtable}
+\usepackage{tabu}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeSlant=0.3, AutoFakeBold = {1.17}]{KaiTi}
 
 %%% Kindle version
 \usepackage[
@@ -43,17 +46,13 @@ margin=2mm,bottom=6mm,nohead
 
 \setlength{\cftchapternumwidth}{8em}
 
-\usepackage[setpagesize=false]{hyperref}
-\usepackage{longtable}
-\usepackage{tabu}
-
 \newcommand{\pinyinzh}{\fontsize{18pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
 \newcommand{\wenzizh}{\fontsize{40pt}{\baselineskip}\selectfont} % 三号,1.5倍行距 
 \newcommand{\zhushizh}{\fontsize{20pt}{\baselineskip}\selectfont} % 三号,1.5倍行距
 
 \title{\zihao{0}千字文}
 \author{\href{mailto:OuTlK@QQ.CoM}{OuTlK@QQ.CoM}}
-% \date{}
+\date{\pinyinzh 2019年8月12日}
 
 \begin{document}
 
